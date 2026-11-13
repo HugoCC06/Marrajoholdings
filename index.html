@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marrajo Holdings</title>
+<meta name="description" content="Marrajo Holdings is a privately held investment and holding company focused on strategic ownership, disciplined capital allocation and the development of enduring business interests.">
+<meta name="theme-color" content="#101C2B">
+<meta property="og:title" content="Marrajo Holdings">
+<meta property="og:description" content="Building enduring value through strategic ownership and disciplined capital allocation.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='6' fill='%23101C2B'/%3E%3Cpath d='M6 30C15 28 24 20 27 6c2.500 10 5 18 9 24z' fill='%23F5F3EE'/%3E%3Cpath d='M5 34.500h31' stroke='%23B49A70' stroke-width='1.600'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('pre')</script>
+<style>
+/* Layout idea: a 12-column editorial grid with a narrow label rail on the left,
+   long horizontal hairlines, and alternating deep-water and ivory bands. One visual world, single theme. */
+:root{
+  color-scheme: light;
+  --navy:#101C2B; --ocean:#172B40; --abyss:#0A131E; --charcoal:#20252B;
+  --ivory:#F5F3EE; --paper:#FBFAF7; --silver:#A9B0B7; --champagne:#B49A70;
+  --ink:#20252B; --ink-soft:#56606B;
+  --line-dark:rgba(16,28,43,.14); --line-light:rgba(245,243,238,.16);
+  --display:"Cormorant Garamond","Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --body:"Manrope","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --gutter:clamp(20px,5vw,64px);
+  --band:clamp(80px,11vw,168px);
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ivory);color:var(--ink);font-family:var(--body);font-weight:400;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg,canvas{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,p,ul,ol,dl,dd,figure,blockquote{margin:0;padding:0}
+ul,ol{list-style:none}
+h1,h2,h3{font-family:var(--display);font-weight:500;text-wrap:balance;letter-spacing:-.005em}
+:focus-visible{outline:2px solid var(--champagne);outline-offset:4px}
+.skip{position:absolute;left:-999px;top:0;background:var(--ivory);color:var(--navy);padding:12px 18px;z-index:200}
+.skip:focus{left:12px;top:12px}
+.wrap{width:100%;max-width:1320px;margin:0 auto;padding:0 var(--gutter)}
+
+/* ---------- type ---------- */
+.label{font-size:11px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--champagne)}
+.h-xl{font-size:clamp(44px,7.200vw,104px);line-height:1.02;font-weight:400}
+.h-lg{font-size:clamp(34px,4.600vw,64px);line-height:1.08;font-weight:400}
+.h-md{font-size:clamp(26px,2.800vw,38px);line-height:1.18}
+.h-sm{font-size:24px;line-height:1.25}
+.lead{font-family:var(--display);font-size:clamp(24px,2.700vw,36px);line-height:1.34;font-weight:400}
+.copy{max-width:62ch;color:var(--ink-soft)}
+.copy p+p{margin-top:1.2em}
+.dark{background:var(--navy);color:var(--ivory)}
+.dark .copy,.deep .copy,.persp .copy{color:rgba(245,243,238,.74)}
+
+/* ---------- logo ---------- */
+.logo{display:inline-flex;align-items:center;gap:14px;color:inherit}
+.logo svg{width:34px;height:34px;flex:none}
+.logo svg{transition:transform .7s var(--ease)}
+.logo:hover svg{transform:translateX(4px)}
+.logo-text{display:flex;flex-direction:column;gap:5px;line-height:1}
+.logo-text b{font-family:var(--display);font-weight:600;font-size:21px;letter-spacing:.3em;margin-right:-.3em}
+.logo-text i{font-style:normal;font-size:8.500px;font-weight:500;letter-spacing:.56em;opacity:.78}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:100;color:var(--ivory);transition:background .5s var(--ease),color .5s var(--ease),box-shadow .5s var(--ease)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:88px;transition:height .5s var(--ease)}
+.nav.solid{background:rgba(245,243,238,.96);color:var(--navy);box-shadow:0 1px 0 var(--line-dark);backdrop-filter:blur(8px)}
+.nav.solid .nav-in{height:68px}
+.nav-links{display:flex;align-items:center;gap:clamp(18px,2.600vw,40px)}
+.nav-links a{position:relative;font-size:12.500px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:8px 0;white-space:nowrap}
+.nav-links a:not(.btn-nav)::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:1px;background:var(--champagne);transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease)}
+.nav-links a:hover::after,.nav-links a[aria-current="page"]::after{transform:scaleX(1)}
+.btn-nav{border:1px solid currentColor;padding:10px 20px !important;border-color:rgba(180,154,112,.7);transition:background .35s,color .35s,border-color .35s}
+.btn-nav:hover{background:var(--champagne);border-color:var(--champagne);color:var(--navy)}
+.burger{display:none;background:none;border:0;color:inherit;width:44px;height:44px;padding:0;cursor:pointer;position:relative}
+.burger span{position:absolute;left:10px;right:10px;height:1px;background:currentColor;transition:transform .4s var(--ease),top .4s var(--ease)}
+.burger span:first-child{top:18px}.burger span:last-child{top:26px}
+.burger[aria-expanded="true"] span:first-child{top:22px;transform:rotate(45deg)}
+.burger[aria-expanded="true"] span:last-child{top:22px;transform:rotate(-45deg)}
+.sheet{position:fixed;inset:0;z-index:90;background:var(--navy);color:var(--ivory);display:flex;flex-direction:column;justify-content:center;padding:96px var(--gutter) 40px;opacity:0;visibility:hidden;transition:opacity .45s var(--ease),visibility .45s}
+.sheet.open{opacity:1;visibility:visible}
+.sheet a{display:flex;align-items:baseline;justify-content:space-between;font-family:var(--display);font-size:clamp(32px,9vw,44px);padding:14px 0;border-bottom:1px solid var(--line-light)}
+.sheet a small{font-family:var(--body);font-size:11px;letter-spacing:.2em;color:var(--champagne)}
+.sheet p{margin-top:32px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--silver)}
+@media (max-width:960px){.nav-links{display:none}.burger{display:block}.nav.menu{color:var(--ivory);background:transparent;box-shadow:none;backdrop-filter:none}}
+
+/* ---------- buttons ---------- */
+.cta{display:inline-flex;align-items:center;gap:14px;font-size:12.500px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;padding:17px 28px;border:1px solid var(--champagne);transition:background .4s var(--ease),color .4s var(--ease);cursor:pointer;background:none;color:inherit;font-family:var(--body)}
+.cta::after{content:"";width:22px;height:1px;background:currentColor;transition:width .4s var(--ease)}
+.cta:hover{background:var(--champagne);color:var(--navy)}
+.cta:hover::after{width:34px}
+.cta.quiet{border-color:transparent;padding-left:0;padding-right:0}
+.cta.quiet:hover{background:none;color:var(--champagne)}
+.cta.solid{background:var(--navy);color:var(--ivory);border-color:var(--navy)}
+.cta.solid:hover{background:var(--ocean);border-color:var(--ocean);color:var(--ivory)}
+
+/* ---------- pages ---------- */
+.page{display:none}
+.page.on{display:block;animation:pagein .9s var(--ease)}
+@keyframes pagein{from{opacity:0}to{opacity:1}}
+.js .rv{opacity:.15;transform:translateY(18px);transition:opacity 1.1s var(--ease),transform 1.1s var(--ease);transition-delay:var(--d,0s)}
+.js .rv.in{opacity:1;transform:none}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:clamp(620px,92vh,900px);display:flex;align-items:flex-end;color:var(--ivory);background:var(--abyss);overflow:hidden;isolation:isolate}
+.sea{position:absolute;inset:0;z-index:-3;background:
+  radial-gradient(120% 80% at 68% -10%,#2C5878 0%,#1B3A55 26%,#14283C 52%,#0C1826 78%,#080F18 100%)}
+.rays{position:absolute;inset:-10% -10% 0 -10%;z-index:-2;width:120%;height:110%;opacity:.9;animation:sway 26s ease-in-out infinite alternate}
+@keyframes sway{from{transform:translateX(-1.500%) skewX(-1deg)}to{transform:translateX(1.500%) skewX(1.500deg)}}
+.mako{position:absolute;z-index:-2;right:-2%;top:17%;width:min(66vw,980px);animation:glide 38s ease-in-out infinite alternate;will-change:transform}
+@keyframes glide{from{transform:translate(3%,2%) rotate(-7deg)}to{transform:translate(-4%,-3%) rotate(-10deg)}}
+.veil{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(8,15,24,.5) 0%,rgba(8,15,24,0) 26%,rgba(8,15,24,.1) 55%,rgba(8,15,24,.82) 100%),linear-gradient(90deg,rgba(8,15,24,.62) 0%,rgba(8,15,24,0) 62%)}
+.hero-in{padding-top:150px;width:100%}
+.hero h1{margin-top:26px;max-width:11ch}
+.hero h1 span{display:block}
+.hero-sub{margin-top:30px;max-width:30ch;font-family:var(--display);font-size:clamp(21px,2.100vw,27px);line-height:1.4;color:rgba(245,243,238,.84)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px 34px;margin-top:44px}
+.hero-foot{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-top:clamp(56px,8vw,96px);padding:22px 0 26px;border-top:1px solid var(--line-light);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,243,238,.6)}
+.hero-foot em{font-family:var(--display);font-size:17px;letter-spacing:.02em;text-transform:none;color:rgba(245,243,238,.78)}
+.hero-foot button{background:none;border:0;color:inherit;font:inherit;letter-spacing:inherit;text-transform:inherit;cursor:pointer;display:flex;align-items:center;gap:12px;padding:6px 0}
+.hero-foot button::before{content:"";width:1px;height:26px;background:var(--champagne);animation:plumb 2.800s var(--ease) infinite;transform-origin:top}
+@keyframes plumb{0%{transform:scaleY(0)}55%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+.js .hero .seq{opacity:0;transform:translateY(22px);animation:rise 1.300s var(--ease) forwards;animation-delay:calc(var(--i)*.16s + .2s)}
+@keyframes rise{to{opacity:1;transform:none}}
+@media (max-width:760px){.mako{width:118vw;right:-30%;top:13%;opacity:.8}.hero-foot em{display:none}}
+
+/* ---------- bands & grid ---------- */
+.band{padding:var(--band) 0}
+.band.tight{padding:calc(var(--band)*.72) 0}
+.paper{background:var(--paper)}
+.deep{background:var(--ocean);color:var(--ivory)}
+.rail{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:32px clamp(32px,6vw,96px);align-items:start}
+.rail>.label{padding-top:12px;border-top:1px solid var(--champagne);max-width:200px}
+@media (max-width:860px){.rail{grid-template-columns:1fr}.rail>.label{max-width:120px}}
+.split{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px clamp(40px,7vw,120px);align-items:start}
+@media (max-width:860px){.split{grid-template-columns:1fr}}
+.stack{display:flex;flex-direction:column;gap:28px}
+
+/* principles */
+.quad{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:clamp(48px,6vw,88px);border-top:1px solid var(--line-dark)}
+.quad li{padding:34px 28px 8px 0;border-right:1px solid var(--line-dark);display:flex;flex-direction:column;gap:16px;position:relative}
+.quad li+li{padding-left:28px}
+.quad li:last-child{border-right:0}
+.quad li::before{content:"";position:absolute;top:-1px;left:0;width:0;height:1px;background:var(--champagne);transition:width .8s var(--ease)}
+.quad li+li::before{left:0}
+.quad li:hover::before{width:100%}
+.quad p{font-size:15px;color:var(--ink-soft)}
+.dark .quad,.deep .quad{border-color:var(--line-light)}
+.dark .quad li,.deep .quad li{border-color:var(--line-light)}
+.dark .quad p,.deep .quad p{color:rgba(245,243,238,.7)}
+@media (max-width:980px){.quad{grid-template-columns:repeat(2,minmax(0,1fr))}.quad li{border-bottom:1px solid var(--line-dark);padding-bottom:34px}.quad li:nth-child(2n){border-right:0}.quad li:nth-child(odd){padding-left:0}}
+@media (max-width:560px){.quad{grid-template-columns:1fr}.quad li,.quad li+li{padding-left:0;border-right:0}}
+.quad.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.quad.three li{border-bottom:1px solid var(--line-dark);padding-bottom:34px}
+.quad.three li:nth-child(3n){border-right:0}
+.quad.three li:nth-child(3n+1){padding-left:0}
+@media (max-width:980px){.quad.three{grid-template-columns:repeat(2,minmax(0,1fr))}.quad.three li:nth-child(3n){border-right:1px solid var(--line-dark)}.quad.three li:nth-child(2n){border-right:0}.quad.three li:nth-child(3n+1){padding-left:28px}.quad.three li:nth-child(odd){padding-left:0}}
+@media (max-width:560px){.quad.three{grid-template-columns:1fr}.quad.three li,.quad.three li:nth-child(n){padding-left:0;border-right:0}}
+
+/* perspective */
+.persp{position:relative;overflow:hidden;background:var(--navy);color:var(--ivory)}
+.persp canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.9}
+.persp .wrap{position:relative}
+.persp-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:48px clamp(40px,7vw,120px);align-items:end}
+@media (max-width:860px){.persp-grid{grid-template-columns:1fr}}
+.steps{border-top:1px solid var(--line-light)}
+.steps li{display:grid;grid-template-columns:54px 1fr;gap:8px;padding:20px 0;border-bottom:1px solid var(--line-light);font-size:15px;color:rgba(245,243,238,.74)}
+.steps b{font-family:var(--display);font-weight:500;font-size:20px;color:var(--champagne)}
+.steps strong{display:block;font-family:var(--display);font-weight:500;font-size:23px;color:var(--ivory);line-height:1.2;margin-bottom:4px}
+
+/* index list */
+.index{border-top:1px solid var(--line-dark)}
+.index li{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:8px 40px;align-items:baseline;padding:26px 0;border-bottom:1px solid var(--line-dark);transition:padding .5s var(--ease),background .5s}
+.index li:hover{padding-left:18px}
+.index h3{font-size:clamp(24px,2.400vw,32px);font-weight:500;transition:color .4s}
+.index li:hover h3{color:var(--champagne)}
+.index p{font-size:15px;color:var(--ink-soft);max-width:54ch}
+@media (max-width:700px){.index li{grid-template-columns:1fr}.index li:hover{padding-left:0}}
+.note{font-size:13px;color:var(--ink-soft);max-width:70ch;padding-left:18px;border-left:1px solid var(--champagne)}
+.dark .note,.deep .note{color:rgba(245,243,238,.62)}
+
+/* closing */
+.closing{text-align:left;position:relative;overflow:hidden}
+.closing .mark{position:absolute;right:-4%;bottom:-18%;width:min(56vw,640px);opacity:.06;pointer-events:none}
+.closing .h-lg span{display:block}
+
+/* page header */
+.phead{position:relative;background:var(--navy);color:var(--ivory);padding:clamp(170px,20vw,250px) 0 clamp(64px,8vw,110px);overflow:hidden}
+.phead::before{content:"";position:absolute;inset:0;background:radial-gradient(90% 120% at 85% 0%,#22435F 0%,rgba(23,43,64,.5) 40%,rgba(16,28,43,0) 70%)}
+.phead .fin-bg{position:absolute;right:4%;bottom:-2px;width:min(40vw,440px);opacity:.09}
+.phead .wrap{position:relative}
+.phead h1{margin-top:22px;max-width:15ch}
+.phead .lead{margin-top:30px;max-width:34ch;color:rgba(245,243,238,.8)}
+
+/* about: meaning */
+.traits{border-top:1px solid var(--line-light)}
+.traits li{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:6px 32px;padding:24px 0;border-bottom:1px solid var(--line-light);align-items:baseline}
+.traits h3{font-size:28px;font-style:italic;font-weight:400}
+.traits p{font-size:15px;color:rgba(245,243,238,.72)}
+@media (max-width:560px){.traits li{grid-template-columns:1fr}}
+.emblem-xl{width:min(100%,360px);margin-bottom:40px}
+.emblem-xl path{fill:none;stroke:var(--champagne);stroke-width:.35}
+.emblem-xl .f{stroke:var(--ivory);stroke-width:.5;stroke-dasharray:120;stroke-dashoffset:120;transition:stroke-dashoffset 2.600s var(--ease) .2s}
+.rv.in .emblem-xl .f,.emblem-xl.in .f{stroke-dashoffset:0}
+html:not(.js) .emblem-xl .f{stroke-dashoffset:0}
+blockquote.pull{font-family:var(--display);font-size:clamp(28px,3.400vw,46px);line-height:1.22;font-style:italic;max-width:22ch}
+blockquote.pull::before{content:"";display:block;width:56px;height:1px;background:var(--champagne);margin-bottom:28px}
+
+/* approach pillars */
+.pillars{border-top:1px solid var(--line-dark)}
+.pillars li{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,4fr) minmax(0,6fr);gap:12px 40px;padding:clamp(34px,4.400vw,60px) 0;border-bottom:1px solid var(--line-dark);align-items:baseline;position:relative}
+.pillars li::after{content:"";position:absolute;left:0;bottom:-1px;height:1px;width:0;background:var(--champagne);transition:width 1s var(--ease)}
+.pillars li:hover::after{width:100%}
+.pillars .n{font-family:var(--display);font-size:clamp(40px,5vw,72px);line-height:.9;color:var(--champagne);font-weight:400;font-variant-numeric:lining-nums}
+.pillars h3{font-size:clamp(32px,3.800vw,52px);font-weight:400}
+.pillars p{color:var(--ink-soft);max-width:52ch}
+.pillars p+p{margin-top:.9em;font-size:14.500px}
+@media (max-width:860px){.pillars li{grid-template-columns:72px 1fr}.pillars li>div{grid-column:2}}
+
+/* portfolio */
+.sector-ui{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px clamp(40px,6vw,96px);align-items:start;margin-top:clamp(40px,5vw,72px)}
+.tabs{border-top:1px solid var(--line-dark);display:flex;flex-direction:column}
+.tabs button{all:unset;box-sizing:border-box;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;width:100%;padding:20px 0;border-bottom:1px solid var(--line-dark);font-family:var(--display);font-size:clamp(22px,2.200vw,28px);line-height:1.2;color:var(--ink-soft);transition:color .35s,padding .45s var(--ease)}
+.tabs button::after{content:"";width:8px;height:8px;border-top:1px solid currentColor;border-right:1px solid currentColor;transform:rotate(45deg);opacity:0;transition:opacity .35s;flex:none;margin-right:6px}
+.tabs button:hover,.tabs button[aria-selected="true"]{color:var(--navy);padding-left:14px}
+.tabs button[aria-selected="true"]::after{opacity:1;border-color:var(--champagne)}
+.tabs button:focus-visible{outline:2px solid var(--champagne);outline-offset:-2px}
+.panel{background:var(--navy);color:var(--ivory);padding:clamp(32px,4vw,56px);min-height:340px;display:flex;flex-direction:column;gap:22px;position:relative;overflow:hidden}
+.panel svg{position:absolute;right:-30px;bottom:-30px;width:220px;opacity:.07}
+.panel p{color:rgba(245,243,238,.76);max-width:50ch}
+.panel dl{display:grid;grid-template-columns:auto 1fr;gap:10px 24px;margin-top:auto;padding-top:22px;border-top:1px solid var(--line-light);font-size:13px}
+.panel dt{letter-spacing:.16em;text-transform:uppercase;font-size:10.500px;color:var(--champagne);padding-top:3px}
+.panel dd{color:rgba(245,243,238,.8)}
+@media (max-width:860px){.sector-ui{grid-template-columns:1fr}}
+.holdings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:clamp(40px,5vw,72px)}
+@media (max-width:980px){.holdings{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.holdings{grid-template-columns:1fr}}
+.card{border:1px solid var(--line-dark);background:var(--paper);padding:28px;display:flex;flex-direction:column;gap:18px;min-height:330px;transition:border-color .4s,transform .6s var(--ease)}
+.card:hover{border-color:var(--champagne);transform:translateY(-4px)}
+.card .plate{aspect-ratio:16/8;background:linear-gradient(135deg,var(--ocean),var(--navy));display:grid;place-items:center;color:var(--ivory);font-family:var(--display);font-size:22px;letter-spacing:.12em}
+.card.reserved{border-style:dashed;background:transparent}
+.card.reserved .plate{background:repeating-linear-gradient(135deg,rgba(16,28,43,.05) 0 1px,transparent 1px 9px);border:1px solid var(--line-dark)}
+.card.reserved .plate svg{width:44px;opacity:.35;color:var(--navy)}
+.card h3{font-size:25px}
+.card .meta{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;font-size:13px;margin-top:auto;padding-top:16px;border-top:1px solid var(--line-dark)}
+.card .meta dt{font-size:10.500px;letter-spacing:.16em;text-transform:uppercase;color:var(--champagne);padding-top:2px}
+.card .meta dd{color:var(--ink-soft)}
+.card p{font-size:14.500px;color:var(--ink-soft)}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:56px clamp(48px,8vw,128px);align-items:start}
+@media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:34px 32px}
+.field{display:flex;flex-direction:column;gap:8px;position:relative}
+.field.full{grid-column:1/-1}
+@media (max-width:600px){form{grid-template-columns:1fr}}
+.field label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);font-weight:500}
+.field label span{color:var(--champagne)}
+.field input,.field textarea{font:inherit;font-size:17px;color:var(--navy);background:transparent;border:0;border-bottom:1px solid rgba(16,28,43,.3);border-radius:0;padding:10px 0 12px;width:100%;transition:border-color .35s}
+.field textarea{min-height:150px;resize:vertical;line-height:1.6}
+.field input:focus,.field textarea:focus{outline:0;border-bottom-color:var(--champagne);box-shadow:0 1px 0 var(--champagne)}
+.field .err{font-size:12.500px;color:#8C3B2E;min-height:18px}
+.field input[aria-invalid="true"],.field textarea[aria-invalid="true"]{border-bottom-color:#8C3B2E}
+.form-foot{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:20px 32px;align-items:center;justify-content:space-between}
+.form-foot small{font-size:12.500px;color:var(--ink-soft);max-width:44ch}
+.receipt{border:1px solid var(--line-dark);background:var(--paper);padding:clamp(28px,4vw,48px);display:flex;flex-direction:column;gap:20px}
+.receipt pre{font-family:var(--body);font-size:14px;white-space:pre-wrap;word-break:break-word;margin:0;padding:20px;background:var(--ivory);border-left:1px solid var(--champagne);color:var(--ink-soft);max-height:260px;overflow:auto}
+.receipt .row{display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center}
+.details{border-top:1px solid var(--line-dark)}
+.details div{padding:22px 0;border-bottom:1px solid var(--line-dark);display:flex;flex-direction:column;gap:6px}
+.details dt{font-size:10.500px;letter-spacing:.2em;text-transform:uppercase;color:var(--champagne)}
+.details dd{font-family:var(--display);font-size:21px;line-height:1.35}
+.details dd.ph{color:var(--ink-soft);font-style:italic}
+
+/* footer */
+footer{background:var(--abyss);color:rgba(245,243,238,.7);padding:clamp(56px,7vw,96px) 0 34px;font-size:14px}
+.foot-top{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,3fr) minmax(0,4fr);gap:40px}
+@media (max-width:860px){.foot-top{grid-template-columns:1fr}}
+footer .logo{color:var(--ivory)}
+footer h2{font-family:var(--body);font-size:10.500px;letter-spacing:.24em;text-transform:uppercase;color:var(--champagne);font-weight:500;margin-bottom:18px}
+footer ul{display:flex;flex-direction:column;gap:10px}
+footer ul a{transition:color .3s}
+footer ul a:hover{color:var(--ivory)}
+.foot-tag{margin-top:24px;font-family:var(--display);font-size:20px;line-height:1.4;max-width:26ch;color:rgba(245,243,238,.82)}
+.foot-base{margin-top:clamp(48px,6vw,80px);padding-top:24px;border-top:1px solid var(--line-light);display:flex;flex-wrap:wrap;gap:12px 40px;justify-content:space-between;font-size:12px;color:rgba(245,243,238,.5)}
+.foot-base p{max-width:78ch}
+
+
+/* ================= DIRECTION II: heritage house, engraved plates, choreographed scroll ================= */
+.label{font-family:var(--display);font-style:italic;font-size:18px;font-weight:400;letter-spacing:.01em;text-transform:none;display:flex;align-items:center;gap:14px;line-height:1.2}
+.label::before{content:"";width:28px;height:1px;background:currentColor;flex:none}
+.rail>.label{border-top:0;padding-top:.45em;max-width:none}
+.h-lg{font-weight:300;letter-spacing:-.012em}
+.h-xl{font-weight:300;letter-spacing:-.018em}
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .06em .16em 0;margin:0 -.06em -.16em 0}
+.wi{display:inline-block;will-change:transform}
+.foot-base{border-top:3px double var(--line-light)}
+.nav.solid.over-dark{background:rgba(10,19,30,.78);color:var(--ivory);box-shadow:0 1px 0 var(--line-light)}
+
+/* curtain */
+.curtain{display:none}
+.pre .curtain{display:grid;place-items:center;position:fixed;inset:0;z-index:300;background:var(--abyss);animation:curtainfail .6s 7s forwards}
+@keyframes curtainfail{to{opacity:0;visibility:hidden}}
+.curtain svg{width:84px;height:84px}
+.curtain path{fill:none;stroke-dasharray:1}
+.c-fin{stroke:var(--ivory);stroke-width:.4;fill:var(--ivory) !important;fill-opacity:0;stroke-dashoffset:1}
+.c-keel{stroke:var(--champagne);stroke-width:.6;stroke-dashoffset:1}
+
+/* hero */
+.hero{min-height:100vh;min-height:100svh}
+.scene{position:absolute;inset:0;z-index:-2;overflow:hidden;will-change:transform}
+.scene-in{position:absolute;inset:0;will-change:transform}
+.mako{animation:none}
+.grain{position:absolute;inset:0;z-index:-1;opacity:.09;mix-blend-mode:overlay;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .6 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.h-hero{font-size:clamp(58px,min(11vw,17vh),172px);line-height:.92;font-weight:300;letter-spacing:-.02em;margin-top:clamp(16px,3vh,30px)}
+.hero h1.h-hero{max-width:none}
+.h-hero em{font-style:italic}
+.ln{display:block;overflow:hidden;padding-bottom:.16em;margin-bottom:-.16em}
+.ln>span{display:block;will-change:transform}
+.hero-row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:28px 64px;margin-top:clamp(28px,5vh,52px)}
+.hero-row .hero-sub,.hero-row .hero-cta{margin-top:0}
+.hero-foot{margin-top:clamp(30px,5vh,64px)}
+
+/* statement */
+.statement{font-family:var(--display);font-size:clamp(28px,3.700vw,54px);line-height:1.2;font-weight:400;letter-spacing:-.008em}
+
+/* stages */
+.stages{position:relative;background:var(--navy);color:var(--ivory)}
+.stage-clip{position:relative;overflow:hidden;background:radial-gradient(90% 90% at 78% 40%,#1D3B55 0%,rgba(23,43,64,.6) 45%,rgba(16,28,43,0) 75%),var(--navy)}
+.stage-clip canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.5}
+.stage-in{position:relative;display:flex;flex-direction:column;gap:clamp(20px,4vh,44px);padding-top:clamp(92px,13vh,128px);padding-bottom:clamp(24px,5vh,52px)}
+.stage-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px 32px;flex-wrap:wrap}
+.stage-head h2{font-size:clamp(20px,2vw,27px);font-style:italic;font-weight:400;color:rgba(245,243,238,.78)}
+.stage-list{display:flex;flex-direction:column;gap:72px}
+.stage{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:28px clamp(32px,6vw,96px);align-items:center}
+.stage-text{display:flex;flex-direction:column;gap:clamp(8px,1.800vh,20px)}
+.stage-n{font-family:var(--display);font-style:italic;font-size:clamp(22px,2.400vw,32px);color:var(--champagne);line-height:1}
+.stage h3{font-size:clamp(60px,min(9.500vw,19vh),150px);line-height:.92;font-weight:300;letter-spacing:-.022em}
+.stage p{max-width:46ch;color:rgba(245,243,238,.78);font-size:clamp(15px,1.250vw,18px)}
+.stage p.more{font-size:14.500px;color:rgba(245,243,238,.56)}
+.plate{position:relative;width:100%;max-width:440px;justify-self:end;border:1px solid var(--line-light);padding:clamp(14px,2vw,26px)}
+.plate::before{content:"";position:absolute;inset:6px;border:1px solid rgba(180,154,112,.26);pointer-events:none}
+.plate svg{width:100%;height:auto;aspect-ratio:1}
+.plate svg *{fill:none;stroke:rgba(245,243,238,.5);stroke-width:1;stroke-dasharray:1}
+.plate svg .gold{stroke:var(--champagne);stroke-width:1.300}
+.plate svg .dot{fill:var(--champagne);stroke:none}
+.plate figcaption{display:flex;justify-content:space-between;gap:12px;font-family:var(--display);font-style:italic;font-size:15px;color:var(--silver);padding-top:10px}
+.stage-foot{display:flex;align-items:center;gap:16px 28px;flex-wrap:wrap}
+.stage-foot .cta{padding-top:8px;padding-bottom:8px}
+.stage-prog{flex:1;min-width:100px;height:1px;background:var(--line-light);position:relative}
+.stage-prog i{position:absolute;inset:0;background:var(--champagne);transform-origin:left;transform:scaleX(0)}
+.stage-count{font-family:var(--display);font-size:18px;font-style:italic;color:var(--silver);font-variant-numeric:lining-nums}
+.stage-count b{font-weight:400;color:var(--ivory)}
+html:not(.anim) .stage-prog,html:not(.anim) .stage-count{display:none}
+html:not(.anim) .stage-in{padding-bottom:var(--band)}
+.anim .stages{height:420vh;height:calc(100svh + 320vh);background:var(--paper)}
+.anim .stage-pin{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.anim .stage-clip,.anim .stage-in{height:100%}
+.anim .stage-list{flex:1;min-height:0;position:relative;display:block}
+.anim .stage{position:absolute;inset:0}
+.anim .plate{max-width:min(440px,50vh)}
+@media (max-width:860px){
+  .stage{grid-template-columns:1fr}
+  .plate{justify-self:start;order:-1;max-width:260px}
+  .anim .stage{align-content:center;gap:16px}
+  .anim .plate{max-width:min(54vw,29vh);padding:10px}
+  .anim .plate figcaption{display:none}
+  .anim .stage p.more,.stage-head h2{display:none}
+}
+@media (max-height:740px){.anim .stage p.more{display:none}}
+
+/* finale */
+.finale{position:relative;background:var(--abyss);color:var(--ivory)}
+.finale-pin{--mw:min(92vw,860px,86vh);position:relative;overflow:hidden;isolation:isolate;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:clamp(96px,14vh,150px) var(--gutter) clamp(64px,10vh,110px)}
+.finale .scene{z-index:-1}
+.sea.far{background:radial-gradient(90% 70% at 50% 8%,#2F5F80 0%,#1C3F5B 28%,#122438 56%,#0A1420 82%,#070D15 100%)}
+.rays.still{animation:none}
+.finale .veil{background:linear-gradient(180deg,rgba(8,15,24,.55) 0%,rgba(8,15,24,0) 30%,rgba(8,15,24,.2) 60%,rgba(8,15,24,.9) 100%)}
+.morph{width:var(--mw);height:auto;overflow:visible;margin-bottom:calc(var(--mw) * -.15);will-change:transform}
+.morph .ref{fill:none;visibility:hidden}
+#m-keel{fill:none;stroke:var(--champagne);stroke-width:2.200;stroke-dasharray:1}
+.fin-lines{position:absolute;left:var(--gutter);right:var(--gutter);bottom:17%;pointer-events:none}
+.fin-line{position:absolute;left:0;right:0;bottom:0;font-family:var(--display);font-weight:300;font-size:clamp(36px,5.600vw,88px);line-height:1.02;letter-spacing:-.015em;opacity:0}
+.fin-line em{font-style:italic}
+html:not(.anim) .fin-lines{display:none}
+.lockup{display:flex;flex-direction:column;align-items:center;gap:clamp(16px,2.800vh,30px)}
+.lock-word{display:flex;flex-direction:column;align-items:center;gap:14px}
+.lock-word b{font-family:var(--display);font-weight:500;font-size:clamp(32px,5vw,62px);letter-spacing:.34em;margin-right:-.34em;line-height:1}
+.lock-word i{font-style:normal;font-size:clamp(10px,1vw,13px);font-weight:500;letter-spacing:.62em;margin-right:-.62em;color:var(--silver)}
+.lock-state{font-family:var(--display);font-style:italic;font-size:clamp(19px,1.900vw,26px);line-height:1.35;color:rgba(245,243,238,.82);max-width:40ch}
+.anim .finale{height:400vh;height:calc(100svh + 300vh)}
+.anim .finale-pin{position:sticky;top:0;height:100vh;height:100svh;padding-top:84px;padding-bottom:28px}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important}
+  html{scroll-behavior:auto}
+  .js .rv,.js .hero .seq{opacity:1;transform:none}
+  .emblem-xl .f{stroke-dashoffset:0}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="curtain" id="curtain" aria-hidden="true"><svg viewBox="0 0 40 40"><path class="c-fin" pathLength="1" d="M6 30C15 28 24 20 27 6c2.5 10 5 18 9 24z"/><path class="c-keel" pathLength="1" d="M5 34.5h31"/></svg></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="emblem" viewBox="0 0 40 40">
+    <path fill="currentColor" d="M6 30C15 28 24 20 27 6c2.500 10 5 18 9 24z"/>
+    <path d="M5 34.500h31" fill="none" stroke="#B49A70" stroke-width="1.400"/>
+  </symbol>
+  <symbol id="fin" viewBox="0 0 40 40"><path fill="currentColor" d="M6 30C15 28 24 20 27 6c2.500 10 5 18 9 24z"/></symbol>
+</svg>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="#home" aria-label="Marrajo Holdings, home">
+      <svg aria-hidden="true"><use href="#emblem"/></svg>
+      <span class="logo-text"><b>MARRAJO</b><i>HOLDINGS</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#home" data-nav="home">Home</a>
+      <a href="#about" data-nav="about">About</a>
+      <a href="#approach" data-nav="approach">Investment Approach</a>
+      <a href="#portfolio" data-nav="portfolio">Portfolio</a>
+      <a href="#contact" data-nav="contact" class="btn-nav">Contact</a>
+    </nav>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="sheet" aria-label="Open menu"><span></span><span></span></button>
+  </div>
+</header>
+<div class="sheet" id="sheet" aria-hidden="true">
+  <nav aria-label="Mobile">
+    <a href="#home">Home <small>01</small></a>
+    <a href="#about">About <small>02</small></a>
+    <a href="#approach">Investment Approach <small>03</small></a>
+    <a href="#portfolio">Portfolio <small>04</small></a>
+    <a href="#contact">Contact <small>05</small></a>
+  </nav>
+  <p>Capital. Conviction. Continuity.</p>
+</div>
+
+<main id="main" tabindex="-1">
+
+<!-- ======================= HOME ======================= -->
+<article class="page" id="page-home" data-title="Marrajo Holdings">
+  <section class="hero" aria-label="Introduction">
+    <div class="scene" id="hero-scene"><div class="scene-in">
+      <div class="sea"></div>
+      <svg class="rays" viewBox="0 0 1200 800" preserveAspectRatio="none" aria-hidden="true">
+        <defs><filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="42"/></filter>
+        <linearGradient id="ray" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#CFE3EE" stop-opacity=".2"/><stop offset="1" stop-color="#CFE3EE" stop-opacity="0"/></linearGradient></defs>
+        <g filter="url(#soft)" fill="url(#ray)"><polygon points="640,-20 720,-20 560,760 420,760"/><polygon points="790,-20 840,-20 800,700 720,700"/><polygon points="900,-20 1010,-20 1100,640 960,640"/><polygon points="500,-20 540,-20 300,620 240,620"/><polygon points="1050,-20 1090,-20 1230,520 1170,520"/></g>
+      </svg>
+      <svg class="mako" id="hero-mako" viewBox="-40 -90 800 310" aria-hidden="true">
+        <defs><linearGradient id="hide" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2A4A66"/><stop offset=".42" stop-color="#132538"/><stop offset="1" stop-color="#070E17"/></linearGradient>
+        <filter id="depth" x="-10%" y="-30%" width="120%" height="160%"><feGaussianBlur stdDeviation="1.6"/></filter></defs>
+        <path filter="url(#depth)" fill="url(#hide)" opacity=".95" d="M0 62C60 30 150 14 250 16c25-26 50-61 85-80-7 34 5 64 27 86 68 8 138 18 168 22l15-8 7 11c23 4 43 8 60 11 28-28 58-68 93-100-15 42-33 77-50 105 13 27 25 52 37 79-32-22-62-47-84-70-28 4-53 8-68 10l-8 12-12-10c-84 13-190 20-262 18 22 22 40 44 54 66-40-18-76-42-104-68C130 100 50 88 0 62z"/>
+      </svg>
+      <div class="grain"></div>
+    </div></div>
+    <div class="veil"></div>
+    <div class="wrap hero-in" id="hero-in">
+      <p class="label hero-k">A privately held holding company</p>
+      <h1 class="h-hero"><span class="ln"><span>Capital.</span></span><span class="ln"><span><em>Conviction.</em></span></span><span class="ln"><span>Continuity.</span></span></h1>
+      <div class="hero-row">
+        <p class="hero-sub">Building enduring value through strategic ownership and disciplined capital allocation.</p>
+        <div class="hero-cta"><a class="cta" href="#about">Discover Marrajo</a><a class="cta quiet" href="#approach">Our Approach</a></div>
+      </div>
+      <div class="hero-foot"><button type="button" id="scrollcue">Continue</button><em>Marrajo, <i>n.</i> Spanish: the mako.</em></div>
+    </div>
+  </section>
+
+  <section class="band" id="intro">
+    <div class="wrap rail">
+      <p class="label rv">Introduction</p>
+      <div class="stack" style="gap:clamp(28px,4vw,48px)">
+        <p class="statement" id="statement">Marrajo Holdings is a privately held investment and holding company focused on strategic ownership, disciplined capital allocation and the development of enduring business interests.</p>
+        <div class="copy rv"><p>We approach ownership as a long-term responsibility. Our role is to identify sound opportunities, commit capital with care and support the businesses and interests we are involved with as they develop over time.</p></div>
+        <div class="rv"><a class="cta quiet" href="#about">About Marrajo Holdings</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band paper">
+    <div class="wrap">
+      <div class="rail">
+        <p class="label rv">Our Philosophy</p>
+        <h2 class="h-lg" data-split style="max-width:18ch">Four principles guide how we think, decide and own.</h2>
+      </div>
+      <ul class="quad">
+        <li class="rv"><h3 class="h-sm">Strategic Vision</h3><p>We form a clear view of where durable value can be built and hold to it with patience, revisiting our thinking as circumstances change.</p></li>
+        <li class="rv" style="--d:.1s"><h3 class="h-sm">Disciplined Execution</h3><p>Decisions follow analysis. We act when the reasoning is sound and the terms are right, and we decline when they are not.</p></li>
+        <li class="rv" style="--d:.2s"><h3 class="h-sm">Long-Term Ownership</h3><p>We prefer to own well rather than trade often. Time is an advantage we intend to keep.</p></li>
+        <li class="rv" style="--d:.3s"><h3 class="h-sm">Sustainable Value Creation</h3><p>Value should come from stronger businesses: better operations, sound governance and reinvestment that compounds.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="stages" id="stages" aria-labelledby="stages-h">
+    <div class="stage-pin"><div class="stage-clip" id="stage-clip">
+      <canvas id="flow" aria-hidden="true"></canvas>
+      <div class="wrap stage-in">
+        <header class="stage-head"><p class="label">Investment Perspective</p><h2 id="stages-h">Precision over noise. Perspective over pace.</h2></header>
+        <ol class="stage-list">
+        <li class="stage"><div class="stage-text"><span class="stage-n">01</span><h3>Identify</h3><p>Recognising attractive opportunities through research, market understanding and strategic assessment.</p><p class="more">We begin with careful observation: how a market works, where it is heading and which businesses within it are positioned to endure.</p></div><figure class="plate"><svg viewBox="0 0 400 400" aria-hidden="true"><circle pathLength="1"  cx="200" cy="200" r="172"/><circle pathLength="1"  cx="200" cy="200" r="130"/><circle pathLength="1"  cx="200" cy="200" r="88"/><circle pathLength="1"  cx="200" cy="200" r="46"/><path pathLength="1"  d="M200 14V386"/><path pathLength="1"  d="M14 200H386"/><path pathLength="1"  d="M68 68L332 332"/><path pathLength="1"  d="M332 68L68 332"/><path pathLength="1" class="gold" d="M200 200L294 116"/><circle pathLength="1" class="gold" cx="294" cy="116" r="10"/><circle class="dot" cx="294" cy="116" r="3.2"/></svg><figcaption><span>Plate I</span><span>Sounding</span></figcaption></figure></li>
+        <li class="stage"><div class="stage-text"><span class="stage-n">02</span><h3>Evaluate</h3><p>Assessing fundamentals, competitive positioning, management quality, risks and long-term potential.</p><p class="more">We test our own assumptions as rigorously as we test the opportunity, and step back when the evidence does not support the case.</p></div><figure class="plate"><svg viewBox="0 0 400 400" aria-hidden="true"><path pathLength="1"  d="M36 290H372"/><path pathLength="1"  d="M36 74H372"/><path pathLength="1"  d="M64 52V336"/><path pathLength="1"  d="M334 52V336"/><path pathLength="1"  d="M253 74V290"/><path pathLength="1"  d="M64 318H334"/><path pathLength="1"  d="M64 310v16M334 310v16"/><path pathLength="1"  d="M354 74V290"/><path pathLength="1"  d="M346 74h16M346 290h16"/><path pathLength="1"  d="M134 290A70 70 0 0 0 121 251"/><path pathLength="1" class="gold" d="M64 290C145 272 226 200 253 74c22.5 90 45 162 81 216z"/></svg><figcaption><span>Plate II</span><span>Measure</span></figcaption></figure></li>
+        <li class="stage"><div class="stage-text"><span class="stage-n">03</span><h3>Build</h3><p>Supporting business development, operational improvement, strategic growth and value creation.</p><p class="more">Ownership is an active responsibility. We aim to contribute perspective, structure and support where they are useful.</p></div><figure class="plate"><svg viewBox="0 0 400 400" aria-hidden="true"><path pathLength="1"  d="M44 332H356"/><path pathLength="1"  d="M56 319H344"/><path pathLength="1"  d="M68 306H332"/><path pathLength="1"  d="M85 306V162M99 306V162M80 162h24M80 306h24"/><path pathLength="1"  d="M139 306V162M153 306V162M134 162h24M134 306h24"/><path pathLength="1"  d="M193 306V162M207 306V162M188 162h24M188 306h24"/><path pathLength="1"  d="M247 306V162M261 306V162M242 162h24M242 306h24"/><path pathLength="1"  d="M301 306V162M315 306V162M296 162h24M296 306h24"/><path pathLength="1"  d="M68 162H332"/><path pathLength="1"  d="M68 148H332"/><path pathLength="1"  d="M58 136H342"/><path pathLength="1" class="gold" d="M58 136L200 68L342 136"/><circle pathLength="1" class="gold" cx="200" cy="108" r="11"/></svg><figcaption><span>Plate III</span><span>Structure</span></figcaption></figure></li>
+        <li class="stage"><div class="stage-text"><span class="stage-n">04</span><h3>Compound</h3><p>Maintaining a long-term perspective and reinvesting in opportunities that create enduring value.</p><p class="more">Time rewards sound decisions. We let good positions mature and reinvest with the discipline that guided the original commitment.</p></div><figure class="plate"><svg viewBox="0 0 400 400" aria-hidden="true"><path pathLength="1"  d="M24 24H376V376H24Z"/><path pathLength="1"  d="M24 214H376"/><path pathLength="1"  d="M232 24V376"/><circle pathLength="1"  cx="232" cy="214" r="38"/><circle pathLength="1"  cx="232" cy="214" r="84"/><circle pathLength="1"  cx="232" cy="214" r="138"/><path pathLength="1" class="gold" id="spiral" d=""/></svg><figcaption><span>Plate IV</span><span>Growth</span></figcaption></figure></li>
+        </ol>
+        <div class="stage-foot"><span class="stage-count"><b id="stage-cur">01</b> / 04</span><div class="stage-prog"><i id="stage-bar"></i></div><a class="cta quiet" href="#approach">Our Investment Approach</a></div>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="rail">
+        <p class="label rv">Diversified Interests</p>
+        <div class="stack">
+          <h2 class="h-lg" data-split style="max-width:17ch">A broad field of view, applied selectively.</h2>
+          <div class="copy rv"><p>Diversification is a discipline, not an objective in itself. We consider opportunities across a range of sectors where long-term ownership and careful capital allocation can make a meaningful difference.</p></div>
+        </div>
+      </div>
+      <ul class="index rv" id="home-sectors" style="margin-top:clamp(48px,6vw,80px)"></ul>
+      <div style="display:flex;flex-wrap:wrap;gap:24px 48px;justify-content:space-between;align-items:center;margin-top:40px">
+        <p class="note">The sectors above describe areas of interest. They are not a statement of current holdings.</p>
+        <a class="cta quiet" href="#portfolio">View Portfolio</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="finale" id="finale" aria-label="Closing statement">
+    <div class="finale-pin">
+      <div class="scene" id="fin-scene"><div class="scene-in">
+        <div class="sea far"></div>
+        <svg class="rays still" viewBox="0 0 1200 800" preserveAspectRatio="none" aria-hidden="true"><g filter="url(#soft)" fill="url(#ray)"><polygon points="640,-20 720,-20 560,760 420,760"/><polygon points="790,-20 840,-20 800,700 720,700"/><polygon points="900,-20 1010,-20 1100,640 960,640"/><polygon points="500,-20 540,-20 300,620 240,620"/><polygon points="1050,-20 1090,-20 1230,520 1170,520"/></g></svg>
+        <div class="grain"></div>
+      </div><div class="veil"></div></div>
+      <svg class="morph" id="morph" viewBox="0 0 800 420" aria-hidden="true">
+        <path class="ref" id="m-shark" d="M0 62C60 30 150 14 250 16c25-26 50-61 85-80-7 34 5 64 27 86 68 8 138 18 168 22l15-8 7 11c23 4 43 8 60 11 28-28 58-68 93-100-15 42-33 77-50 105 13 27 25 52 37 79-32-22-62-47-84-70-28 4-53 8-68 10l-8 12-12-10c-84 13-190 20-262 18 22 22 40 44 54 66-40-18-76-42-104-68C130 100 50 88 0 62z"/>
+        <path class="ref" id="m-fin" d="M6 30C15 28 24 20 27 6c2.5 10 5 18 9 24z"/>
+        <path id="m-shape" fill="#F5F3EE" transform="translate(274 64) scale(6)" d="M6 30C15 28 24 20 27 6c2.5 10 5 18 9 24z"/>
+        <path id="m-keel" pathLength="1" d="M304 271H490"/>
+      </svg>
+      <div class="fin-lines" aria-hidden="true">
+        <p class="fin-line">Built on <em>conviction.</em></p>
+        <p class="fin-line">Guided by <em>perspective.</em></p>
+        <p class="fin-line">Focused on the <em>long term.</em></p>
+      </div>
+      <div class="lockup">
+        <p class="lock-word"><b>MARRAJO</b><i>HOLDINGS</i></p>
+        <p class="lock-state">Built on conviction. Guided by perspective. Focused on the long term.</p>
+        <a class="cta" href="#contact">Start a Conversation</a>
+      </div>
+    </div>
+  </section>
+</article>
+
+<!-- ======================= ABOUT ======================= -->
+<article class="page" id="page-about" data-title="About | Marrajo Holdings">
+  <header class="phead">
+    <svg class="fin-bg" aria-hidden="true" viewBox="0 0 40 40"><use href="#fin"/></svg>
+    <div class="wrap">
+      <p class="label">About</p>
+      <h1 class="h-xl">Ownership, considered.</h1>
+      <p class="lead">A privately held holding company built around long-term thinking and the responsible use of capital.</p>
+    </div>
+  </header>
+
+  <section class="band">
+    <div class="wrap rail">
+      <p class="label rv">Who We Are</p>
+      <div class="stack rv" style="--d:.1s">
+        <p class="lead">Marrajo Holdings exists to identify opportunities, allocate capital strategically and build business interests of lasting quality.</p>
+        <div class="split">
+          <div class="copy"><p>We are privately held, and that shapes how we work. Without the pressure of short reporting cycles, we can take the time to understand an opportunity properly and remain committed to it for as long as it continues to merit our capital.</p></div>
+          <div class="copy"><p>We combine an owner's patience with an entrepreneur's ambition. We look for situations where careful thought, sound structure and sustained attention can build something of real substance, and we aim to be a constructive, dependable counterpart to everyone we work with.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band paper">
+    <div class="wrap split">
+      <blockquote class="pull rv">Value that endures is built in the business, not in the structure around it.</blockquote>
+      <div class="stack rv" style="--d:.12s">
+        <p class="label">Our Philosophy</p>
+        <h2 class="h-md">Why we favour sustainable value over financial engineering.</h2>
+        <div class="copy">
+          <p>Returns that depend on leverage, timing or structure alone tend to be fragile. Returns that come from a stronger business tend to last. We therefore direct our attention to the things that make an enterprise more valuable in its own right: the quality of what it offers, the capability of its people, the soundness of its finances and its capacity to reinvest.</p>
+          <p>This is a slower route, and a more demanding one. It requires judgement about what to own, restraint about what to pay and patience once a commitment has been made. We believe it is also the more reliable route, and the one most consistent with responsible ownership.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band dark">
+    <div class="wrap split">
+      <div class="stack rv">
+        <svg class="emblem-xl" viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M2 34.500h36M2 30h36M27 2v36" opacity=".45"/>
+          <path d="M6 30C15 28 24 20 27 6" opacity=".9"/>
+          <path class="f" d="M6 30C15 28 24 20 27 6c2.500 10 5 18 9 24z"/>
+        </svg>
+        <p class="label">The Meaning Behind Marrajo</p>
+        <h2 class="h-lg" style="max-width:14ch">A name chosen for how it moves.</h2>
+        <div class="copy"><p><em>Marrajo</em> is the Spanish word for the mako. We chose the name for its qualities of movement rather than its force: economy, accuracy and composure over long distances. They describe how we intend to conduct ourselves as investors and owners.</p></div>
+      </div>
+      <ul class="traits rv" style="--d:.15s">
+        <li><h3>Speed</h3><p>Acting decisively when an opportunity is well understood and the moment is right.</p></li>
+        <li><h3>Precision</h3><p>Making considered decisions, with a clear view of what we are committing to and why.</p></li>
+        <li><h3>Adaptability</h3><p>Adjusting course as markets change, without losing sight of our purpose.</p></li>
+        <li><h3>Intelligence</h3><p>Approaching each opportunity analytically, and letting evidence lead.</p></li>
+        <li><h3>Resilience</h3><p>Holding a long-term perspective through changing conditions.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="band tight">
+    <div class="wrap" style="display:flex;flex-wrap:wrap;gap:28px 64px;justify-content:space-between;align-items:center">
+      <h2 class="h-md rv" style="max-width:24ch">See how these principles shape the way we invest.</h2>
+      <a class="cta solid rv" href="#approach">Investment Approach</a>
+    </div>
+  </section>
+</article>
+
+<!-- ======================= APPROACH ======================= -->
+<article class="page" id="page-approach" data-title="Investment Approach | Marrajo Holdings">
+  <header class="phead">
+    <svg class="fin-bg" aria-hidden="true" viewBox="0 0 40 40"><use href="#fin"/></svg>
+    <div class="wrap">
+      <p class="label">Investment Approach</p>
+      <h1 class="h-xl">Deliberate by design.</h1>
+      <p class="lead">Four stages describe how we move from first observation to long-term ownership.</p>
+    </div>
+  </header>
+
+  <section class="band">
+    <div class="wrap">
+      <ol class="pillars">
+        <li class="rv"><span class="n">01</span><h3>Identify</h3><div><p>Recognising attractive opportunities through research, market understanding and strategic assessment.</p><p>We begin with careful observation: how a market works, where it is heading and which businesses within it are positioned to endure.</p></div></li>
+        <li class="rv"><span class="n">02</span><h3>Evaluate</h3><div><p>Assessing fundamentals, competitive positioning, management quality, risks and long-term potential.</p><p>We test our own assumptions as rigorously as we test the opportunity, and we are prepared to step back when the evidence does not support the case.</p></div></li>
+        <li class="rv"><span class="n">03</span><h3>Build</h3><div><p>Supporting business development, operational improvement, strategic growth and value creation.</p><p>Ownership is an active responsibility. We aim to contribute perspective, structure and support where they are useful.</p></div></li>
+        <li class="rv"><span class="n">04</span><h3>Compound</h3><div><p>Maintaining a long-term perspective and reinvesting in opportunities that create enduring value.</p><p>Time rewards sound decisions. We seek to let good positions mature and to reinvest with the same discipline that guided the original commitment.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="band deep">
+    <div class="wrap">
+      <div class="rail">
+        <p class="label rv">Investment Principles</p>
+        <h2 class="h-lg rv" style="--d:.1s;max-width:16ch">The standards we hold ourselves to.</h2>
+      </div>
+      <ul class="quad three">
+        <li class="rv"><h3 class="h-sm">Long-term orientation</h3><p>We assess opportunities over years, not quarters, and structure our commitments accordingly.</p></li>
+        <li class="rv" style="--d:.08s"><h3 class="h-sm">Disciplined capital allocation</h3><p>Capital is finite and deserves care. Every commitment is weighed against the alternatives, including patience.</p></li>
+        <li class="rv" style="--d:.16s"><h3 class="h-sm">Fundamental analysis</h3><p>Our view of value rests on the underlying economics of a business rather than on market sentiment.</p></li>
+        <li class="rv"><h3 class="h-sm">Risk awareness</h3><p>We consider what could go wrong before what could go right, and we seek to avoid risks we cannot understand.</p></li>
+        <li class="rv" style="--d:.08s"><h3 class="h-sm">Strategic flexibility</h3><p>We keep the freedom to adapt our approach to the opportunity, rather than fitting the opportunity to a formula.</p></li>
+        <li class="rv" style="--d:.16s"><h3 class="h-sm">Responsible ownership</h3><p>We aim to be a considered and constructive owner, mindful of the people and relationships a business depends on.</p></li>
+      </ul>
+      <p class="note rv" style="margin-top:48px">Marrajo Holdings does not publish fixed investment criteria. Each opportunity is considered on its own merits. Nothing on this website constitutes investment advice or an offer of any kind.</p>
+    </div>
+  </section>
+
+  <section class="band tight">
+    <div class="wrap" style="display:flex;flex-wrap:wrap;gap:28px 64px;justify-content:space-between;align-items:center">
+      <h2 class="h-md rv" style="max-width:24ch">If you have an opportunity you would like to discuss, we would be glad to hear from you.</h2>
+      <a class="cta solid rv" href="#contact">Start a Conversation</a>
+    </div>
+  </section>
+</article>
+
+<!-- ======================= PORTFOLIO ======================= -->
+<article class="page" id="page-portfolio" data-title="Portfolio | Marrajo Holdings">
+  <header class="phead">
+    <svg class="fin-bg" aria-hidden="true" viewBox="0 0 40 40"><use href="#fin"/></svg>
+    <div class="wrap">
+      <p class="label">Portfolio</p>
+      <h1 class="h-xl">Interests, built over time.</h1>
+      <p class="lead">Our portfolio will take shape deliberately, one considered commitment at a time.</p>
+    </div>
+  </header>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="rail">
+        <p class="label rv">Investment Interests</p>
+        <div class="stack rv" style="--d:.1s">
+          <h2 class="h-lg" style="max-width:17ch">Where we direct our attention.</h2>
+          <div class="copy"><p>We consider opportunities across the sectors below. They describe where we see scope for long-term ownership and disciplined capital to create value. They are areas of interest, and should not be read as a list of current holdings.</p></div>
+        </div>
+      </div>
+      <div class="sector-ui rv">
+        <div class="tabs" role="tablist" aria-label="Sectors of interest" id="tabs"></div>
+        <div class="panel" role="tabpanel" id="panel" aria-live="polite">
+          <svg aria-hidden="true" viewBox="0 0 40 40"><use href="#fin"/></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band paper">
+    <div class="wrap">
+      <div class="rail">
+        <p class="label rv">Holdings</p>
+        <div class="stack rv" style="--d:.1s">
+          <h2 class="h-lg" style="max-width:17ch" id="holdings-h">Holdings will be presented here.</h2>
+          <div class="copy"><p id="holdings-intro">Marrajo Holdings will publish profiles of its investments and operating interests on this page as they are confirmed. Each profile will follow the format shown below.</p></div>
+        </div>
+      </div>
+      <div class="holdings" id="holdings"></div>
+    </div>
+  </section>
+</article>
+
+<!-- ======================= CONTACT ======================= -->
+<article class="page" id="page-contact" data-title="Contact | Marrajo Holdings">
+  <header class="phead">
+    <svg class="fin-bg" aria-hidden="true" viewBox="0 0 40 40"><use href="#fin"/></svg>
+    <div class="wrap">
+      <p class="label">Contact</p>
+      <h1 class="h-xl">Start a Conversation.</h1>
+      <p class="lead">For general enquiries, business opportunities and potential strategic partnerships, please contact Marrajo Holdings.</p>
+    </div>
+  </header>
+
+  <section class="band">
+    <div class="wrap contact-grid">
+      <div id="form-slot">
+        <form id="enquiry" novalidate>
+          <div class="field"><label for="f-name">Name <span aria-hidden="true">*</span></label><input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name"><span class="err" id="e-name" role="alert"></span></div>
+          <div class="field"><label for="f-email">Email <span aria-hidden="true">*</span></label><input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="e-email"><span class="err" id="e-email" role="alert"></span></div>
+          <div class="field"><label for="f-company">Company</label><input id="f-company" name="company" type="text" autocomplete="organization"><span class="err"></span></div>
+          <div class="field"><label for="f-subject">Subject <span aria-hidden="true">*</span></label><input id="f-subject" name="subject" type="text" required aria-describedby="e-subject"><span class="err" id="e-subject" role="alert"></span></div>
+          <div class="field full"><label for="f-message">Message <span aria-hidden="true">*</span></label><textarea id="f-message" name="message" required aria-describedby="e-message"></textarea><span class="err" id="e-message" role="alert"></span></div>
+          <div class="form-foot">
+            <small>Fields marked * are required. Information you provide is used only to respond to your enquiry.</small>
+            <button class="cta solid" type="submit">Submit Enquiry</button>
+          </div>
+        </form>
+      </div>
+      <aside aria-label="Contact details">
+        <p class="label" style="margin-bottom:22px">Contact details</p>
+        <dl class="details" id="details"></dl>
+      </aside>
+    </div>
+  </section>
+</article>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <a class="logo" href="#home" aria-label="Marrajo Holdings, home"><svg aria-hidden="true"><use href="#emblem"/></svg><span class="logo-text"><b>MARRAJO</b><i>HOLDINGS</i></span></a>
+        <p class="foot-tag">Building enduring value through strategic ownership and disciplined capital allocation.</p>
+      </div>
+      <div>
+        <h2>Navigate</h2>
+        <ul><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#approach">Investment Approach</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#contact">Contact</a></li></ul>
+      </div>
+      <div>
+        <h2>Enquiries</h2>
+        <p style="max-width:34ch">For general enquiries, business opportunities and potential strategic partnerships.</p>
+        <p style="margin-top:18px"><a class="cta quiet" href="#contact" style="padding-top:8px;padding-bottom:8px">Contact us</a></p>
+      </div>
+    </div>
+    <div class="foot-base">
+      <p>© <span id="year">2026</span> Marrajo Holdings. All rights reserved.</p>
+      <p>This website is provided for general information only. It does not constitute an offer, solicitation or recommendation in respect of any investment.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+/* ===================== EDITABLE CONTENT =====================
+   Update these three blocks as the company develops. Nothing else needs to change. */
+
+// Contact details. Leave a value as null until it is confirmed; the page shows a placeholder.
+// `endpoint`: URL of a form service or server route that accepts a JSON POST. Until set, nothing is sent.
+const CONTACT = { email: null, telephone: null, address: null, endpoint: null };
+
+// Sectors of interest (not holdings).
+const SECTORS = [
+  { name: "Financial Services", short: "Businesses that manage, protect and move capital.",
+    text: "Financial services reward trust, prudence and scale built patiently. We are interested in businesses with sound governance, recurring client relationships and a clear understanding of the risks they carry.",
+    focus: "Trust, governance, recurring relationships" },
+  { name: "Technology", short: "Software and digital businesses with durable economics.",
+    text: "We look past novelty to the underlying economics: products that customers depend on, revenue that recurs and teams able to keep improving what they have built.",
+    focus: "Product depth, recurring revenue, capable teams" },
+  { name: "Real Assets", short: "Tangible assets with lasting utility.",
+    text: "Property and other tangible assets can provide stability and long-duration value when acquired carefully and managed well. Location, quality and sensible financing matter more than timing.",
+    focus: "Quality, utility, conservative financing" },
+  { name: "Consumer & Lifestyle", short: "Brands and products people choose repeatedly.",
+    text: "Enduring consumer businesses are built on genuine preference. We are drawn to brands with a distinct identity, loyal customers and the discipline to grow without diluting what makes them valued.",
+    focus: "Brand identity, customer loyalty, measured growth" },
+  { name: "Business Services", short: "Essential services with dependable demand.",
+    text: "Companies that provide services other organisations rely on can compound steadily over long periods. We value operational quality, client retention and management depth.",
+    focus: "Operational quality, retention, management depth" },
+  { name: "Other Strategic Opportunities", short: "Situations that merit attention on their own terms.",
+    text: "Some of the most attractive opportunities do not fit a category. We remain open to situations outside our principal areas of interest where our approach to ownership is well suited.",
+    focus: "Assessed case by case" }
+];
+
+// Portfolio holdings. Add an object per confirmed holding, e.g.
+// { name: "Company name", sector: "Technology", relationship: "Majority owner", since: "2027",
+//   summary: "One or two sentences describing the business.", url: "https://example.com" }
+const HOLDINGS = [];
+
+/* ===================== SITE ===================== */
+document.documentElement.classList.add("js");
+const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+$("#year").textContent = new Date().getFullYear();
+
+// --- render: home sector index
+$("#home-sectors").innerHTML = SECTORS.map(s => `<li><h3>${esc(s.name)}</h3><p>${esc(s.short)}</p></li>`).join("");
+
+// --- render: portfolio sector tabs
+const tabs = $("#tabs"), panel = $("#panel");
+tabs.innerHTML = SECTORS.map((s, i) => `<button role="tab" id="tab-${i}" aria-controls="panel" aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}">${esc(s.name)}</button>`).join("");
+function showSector(i, focus) {
+  const s = SECTORS[i], held = HOLDINGS.filter(h => h.sector === s.name).length;
+  $$("button", tabs).forEach((b, j) => { b.setAttribute("aria-selected", j === i); b.tabIndex = j === i ? 0 : -1; if (j === i && focus) b.focus(); });
+  panel.setAttribute("aria-labelledby", "tab-" + i);
+  $$(":scope > :not(svg)", panel).forEach(n => n.remove());
+  panel.insertAdjacentHTML("beforeend", `<p class="label">Area of interest</p><h3 class="h-md">${esc(s.name)}</h3><p>${esc(s.text)}</p>
+    <dl><dt>Emphasis</dt><dd>${esc(s.focus)}</dd><dt>Holdings</dt><dd>${held ? held + " published" : "None published"}</dd></dl>`);
+}
+tabs.addEventListener("click", e => { const b = e.target.closest("button"); if (b) showSector($$("button", tabs).indexOf(b)); });
+tabs.addEventListener("keydown", e => {
+  const bs = $$("button", tabs), i = bs.indexOf(document.activeElement);
+  if (i < 0) return;
+  const k = { ArrowDown: 1, ArrowRight: 1, ArrowUp: -1, ArrowLeft: -1 }[e.key];
+  if (k) { e.preventDefault(); showSector((i + k + bs.length) % bs.length, true); }
+});
+showSector(0);
+
+// --- render: holdings
+(function () {
+  const el = $("#holdings");
+  if (HOLDINGS.length) {
+    $("#holdings-h").textContent = "Our holdings.";
+    $("#holdings-intro").textContent = "The investments and operating interests of Marrajo Holdings.";
+    el.innerHTML = HOLDINGS.map(h => {
+      const initials = h.name.split(/\s+/).map(w => w[0]).join("").slice(0, 3).toUpperCase();
+      return `<article class="card rv"><div class="plate">${esc(initials)}</div><h3>${esc(h.name)}</h3><p>${esc(h.summary || "")}</p>
+        <dl class="meta"><dt>Sector</dt><dd>${esc(h.sector || "")}</dd><dt>Relationship</dt><dd>${esc(h.relationship || "")}</dd><dt>Since</dt><dd>${esc(h.since || "")}</dd></dl>
+        ${h.url ? `<a class="cta quiet" href="${esc(h.url)}" rel="noopener" style="padding:4px 0">Visit website</a>` : ""}</article>`;
+    }).join("");
+  } else {
+    const fin = `<svg viewBox="0 0 40 40" aria-hidden="true"><use href="#fin"/></svg>`;
+    el.innerHTML = `<article class="card reserved rv"><div class="plate">${fin}</div><p class="label">Profile format</p><h3>Company name</h3><p>A short description of the business, its market and its role within the group.</p>
+        <dl class="meta"><dt>Sector</dt><dd>Sector category</dd><dt>Relationship</dt><dd>Nature of interest</dd><dt>Since</dt><dd>Year</dd></dl></article>` +
+      [1, 2].map(i => `<article class="card reserved rv" style="--d:${i * .1}s"><div class="plate">${fin}</div><p class="label">Reserved</p><h3 style="color:var(--ink-soft)">Future holding</h3><p>This space is reserved for a future investment or operating interest.</p>
+        <dl class="meta"><dt>Status</dt><dd>To be announced</dd></dl></article>`).join("");
+  }
+})();
+
+// --- render: contact details
+$("#details").innerHTML = [["Email", CONTACT.email, "Email address to be confirmed"], ["Telephone", CONTACT.telephone, "Telephone number to be confirmed"], ["Office", CONTACT.address, "Office address to be confirmed"]]
+  .map(([k, v, ph]) => `<div><dt>${k}</dt><dd class="${v ? "" : "ph"}">${esc(v || ph)}</dd></div>`).join("");
+
+// --- routing (hash)
+const ROUTES = ["home", "about", "approach", "portfolio", "contact"];
+const root = document.documentElement, nav = $("#nav"), sheet = $("#sheet"), burger = $("#burger");
+const hasG = !!(window.gsap && window.ScrollTrigger) && !reduce;
+if (hasG) { gsap.registerPlugin(ScrollTrigger); root.classList.add("anim"); }
+let io, ctx = null, cleanups = [];
+function observe(root) {
+  if (io) io.disconnect();
+  const els = $$(".rv", root);
+  if (reduce || !("IntersectionObserver" in window)) { els.forEach(e => e.classList.add("in")); return; }
+  io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { rootMargin: "0px 0px -8% 0px", threshold: .08 });
+  els.forEach(e => io.observe(e));
+}
+function route(initial) {
+  const h = location.hash.replace("#", ""), r = ROUTES.includes(h) ? h : "home";
+  if (ctx) { cleanups.splice(0).forEach(f => f()); ctx.revert(); ctx = null; }
+  $$(".page").forEach(p => p.classList.toggle("on", p.id === "page-" + r));
+  const page = $("#page-" + r);
+  document.title = page.dataset.title;
+  $$("[data-nav]").forEach(a => a.dataset.nav === r ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current"));
+  closeMenu();
+  if (!initial) { window.scrollTo(0, 0); $("#main").focus({ preventScroll: true }); }
+  observe(page); onScroll();
+  if (r === "home") startFlow();
+  let enter = null;
+  if (hasG) { ctx = gsap.context(() => { enter = build(r, page); }); ScrollTrigger.refresh(); }
+  return enter;
+}
+addEventListener("hashchange", () => { const e = route(false); if (e) e.play(); });
+function onScroll() { nav.classList.toggle("solid", scrollY > 48); }
+addEventListener("scroll", onScroll, { passive: true });
+
+// --- mobile menu
+function closeMenu() { sheet.classList.remove("open"); sheet.setAttribute("aria-hidden", "true"); burger.setAttribute("aria-expanded", "false"); burger.setAttribute("aria-label", "Open menu"); nav.classList.remove("menu"); document.body.style.overflow = ""; }
+burger.addEventListener("click", () => {
+  const open = !sheet.classList.contains("open");
+  if (!open) return closeMenu();
+  sheet.classList.add("open"); sheet.setAttribute("aria-hidden", "false"); burger.setAttribute("aria-expanded", "true"); burger.setAttribute("aria-label", "Close menu"); nav.classList.add("menu"); document.body.style.overflow = "hidden";
+});
+sheet.addEventListener("click", e => { if (e.target.closest("a")) closeMenu(); });
+addEventListener("keydown", e => { if (e.key === "Escape") closeMenu(); });
+// same-page link clicks (hash unchanged) still return to the top
+document.addEventListener("click", e => { const a = e.target.closest('a[href^="#"]'); if (a && a.getAttribute("href") === (location.hash || "#home")) window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" }); });
+$("#scrollcue").addEventListener("click", () => $("#intro").scrollIntoView({ behavior: reduce ? "auto" : "smooth" }));
+
+// --- flow field: streamlines parting around a fusiform body (the mako, abstracted)
+let flowOn = false;
+function startFlow() {
+  if (flowOn) return; flowOn = true;
+  const c = $("#flow"), ctx = c.getContext("2d");
+  let w, h, t = 0, vis = true;
+  const size = () => { const d = Math.min(devicePixelRatio || 1, 2); w = c.clientWidth; h = c.clientHeight; c.width = w * d; c.height = h * d; ctx.setTransform(d, 0, 0, d, 0, 0); draw(); };
+  function draw() {
+    ctx.clearRect(0, 0, w, h);
+    const cx = w * .74, cy = h * .46, L = Math.max(w * .2, 170), n = 34, gap = h / (n - 6);
+    for (let i = 0; i < n; i++) {
+      const d = (i - (n - 1) / 2) * gap, s = Math.sign(d) || 1, near = Math.exp(-Math.abs(d) / (h * .2));
+      ctx.beginPath();
+      for (let x = -20; x <= w + 20; x += 8) {
+        const u = (x - cx) / L, bulge = Math.exp(-u * u * (u > 0 ? .55 : 1.5));
+        const y = cy + d + s * near * bulge * h * .13 + Math.sin(x * .004 + t + i * .35) * 2.200;
+        x === -20 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+      }
+      const a = .05 + near * .22;
+      ctx.strokeStyle = i % 5 === 2 ? `rgba(180,154,112,${a + .1})` : `rgba(169,176,183,${a})`;
+      ctx.lineWidth = 1; ctx.stroke();
+    }
+  }
+  function tick() { if (vis && c.offsetParent) { t += .006; draw(); } requestAnimationFrame(tick); }
+  addEventListener("resize", size); size();
+  if (!reduce) {
+    if ("IntersectionObserver" in window) new IntersectionObserver(e => vis = e[0].isIntersecting).observe(c);
+    requestAnimationFrame(tick);
+  }
+}
+
+// --- contact form
+const form = $("#enquiry"), slot = $("#form-slot");
+const RULES = { name: v => v ? "" : "Please enter your name.", email: v => !v ? "Please enter your email address." : /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v) ? "" : "Please enter a valid email address.", subject: v => v ? "" : "Please enter a subject.", message: v => v.length >= 10 ? "" : "Please enter a message of at least a few words." };
+function check(name) {
+  const f = form.elements[name], msg = RULES[name](f.value.trim());
+  f.setAttribute("aria-invalid", msg ? "true" : "false"); $("#e-" + name).textContent = msg; return !msg;
+}
+Object.keys(RULES).forEach(n => form.elements[n].addEventListener("blur", () => check(n)));
+form.addEventListener("submit", async e => {
+  e.preventDefault();
+  const bad = Object.keys(RULES).filter(n => !check(n));
+  if (bad.length) { form.elements[bad[0]].focus(); return; }
+  const d = Object.fromEntries(new FormData(form).entries());
+  const text = `Subject: ${d.subject}\nFrom: ${d.name} <${d.email}>${d.company ? "\nCompany: " + d.company : ""}\n\n${d.message}`;
+  let sent = false;
+  if (CONTACT.endpoint) {
+    try { const r = await fetch(CONTACT.endpoint, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(d) }); sent = r.ok; } catch (_) { sent = false; }
+  }
+  slot.innerHTML = `<div class="receipt" tabindex="-1" role="status">
+    <p class="label">${sent ? "Enquiry received" : "Enquiry prepared"}</p>
+    <h2 class="h-md">${sent ? "Thank you. We will respond in due course." : "Your enquiry has not been sent yet."}</h2>
+    <p class="copy">${sent ? "A copy of your message is shown below for your records." : "This form is not yet connected to a mail service, so nothing has left your browser. Your message is shown below and can be copied."}</p>
+    <pre id="receipt-text"></pre>
+    <div class="row"><button class="cta solid" type="button" id="copy">Copy message</button><button class="cta quiet" type="button" id="again">Write another enquiry</button></div></div>`;
+  $("#receipt-text").textContent = text;
+  $(".receipt").focus();
+  $("#copy").addEventListener("click", async ev => { try { await navigator.clipboard.writeText(text); ev.target.textContent = "Copied"; } catch (_) { const r = document.createRange(); r.selectNodeContents($("#receipt-text")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); ev.target.textContent = "Selected. Press Ctrl/Cmd + C"; } });
+  $("#again").addEventListener("click", () => { slot.innerHTML = ""; slot.appendChild(form); form.reset(); $$("[aria-invalid]", form).forEach(f => f.removeAttribute("aria-invalid")); $$(".err", form).forEach(x => x.textContent = ""); form.elements.name.focus(); });
+});
+
+/* ===================== CHOREOGRAPHY (GSAP + ScrollTrigger) =====================
+   Everything below is progressive: without GSAP, or with reduced motion, the page is a complete static layout. */
+function split(el) {
+  if (!el.dataset.done) { el.dataset.done = 1; el.innerHTML = el.textContent.trim().split(/\s+/).map(w => `<span class="w"><span class="wi">${esc(w)}</span></span>`).join(" "); }
+  return $$(".wi", el);
+}
+// golden spiral for Plate IV
+(function () { let d = ""; for (let i = 0; i <= 220; i++) { const th = i / 220 * 12.1, r = 4 * Math.exp(.3063 * th); d += (i ? "L" : "M") + (232 + r * Math.cos(th)).toFixed(1) + " " + (214 + r * Math.sin(th)).toFixed(1); } $("#spiral").setAttribute("d", d); })();
+
+function toneNav(page) {
+  const act = new Set();
+  [...$$(".hero,.phead,.stages,.finale,.dark,.deep", page), $("footer")].forEach(s => ScrollTrigger.create({ trigger: s, start: "top 60px", end: "bottom 60px",
+    onToggle: self => { self.isActive ? act.add(s) : act.delete(s); nav.classList.toggle("over-dark", act.size > 0); } }));
+  cleanups.push(() => nav.classList.remove("over-dark"));
+}
+
+function build(r, page) {
+  toneNav(page);
+  const enter = gsap.timeline({ paused: true });
+  if (r === "home") {
+    enter.fromTo(".hero .scene-in", { scale: 1.22 }, { scale: 1, duration: 3.2, ease: "power2.out" }, 0)
+      .fromTo(".hero .ln>span", { yPercent: 118 }, { yPercent: 0, duration: 1.35, stagger: .15, ease: "power4.out" }, .25)
+      .fromTo(".hero-k,.hero-row>*,.hero-foot", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 1.1, stagger: .13, ease: "power2.out" }, .95);
+    // opening scene: the image scales and the composition parts as the visitor leaves it
+    gsap.timeline({ defaults: { ease: "none" }, scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true } })
+      .to("#hero-scene", { scale: 1.18 }, 0).to("#hero-mako", { xPercent: -14, yPercent: -12 }, 0).to("#hero-in", { yPercent: -14, opacity: 0 }, 0);
+    // statement: read into focus word by word
+    const st = $("#statement");
+    gsap.fromTo(split(st), { opacity: .14 }, { opacity: 1, stagger: .1, ease: "none", scrollTrigger: { trigger: st, start: "top 84%", end: "bottom 48%", scrub: .5 } });
+    buildStages(); buildFinale();
+  } else {
+    enter.fromTo(split($(".phead h1", page)), { yPercent: 118 }, { yPercent: 0, duration: 1.2, stagger: .07, ease: "power4.out" }, .1)
+      .fromTo($$(".phead .label,.phead .lead", page), { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 1, stagger: .18, ease: "power2.out" }, .45);
+  }
+  $$("[data-split]", page).forEach(el => gsap.fromTo(split(el), { yPercent: 118 }, { yPercent: 0, duration: 1.15, stagger: .045, ease: "power4.out", scrollTrigger: { trigger: el, start: "top 86%", once: true } }));
+  return enter;
+}
+
+// --- pinned sequence: four stages, one frame
+function buildStages() {
+  const st = $$(".stage"), strokes = el => $$(".plate svg [pathLength]", el);
+  let cur = 0, tl = null;
+  gsap.set(st, { autoAlpha: 0 }); gsap.set(st[0], { autoAlpha: 1 });
+  gsap.set(strokes(st[0]), { strokeDashoffset: 1 });
+  // the dark frame opens out of the page, then holds
+  gsap.fromTo("#stage-clip", { clipPath: "inset(16% 20% 16% 20%)" }, { clipPath: "inset(0% 0% 0% 0%)", ease: "none", scrollTrigger: { trigger: "#stages", start: "top 92%", end: "top top", scrub: true } });
+  ScrollTrigger.create({ trigger: "#stages", start: "top 35%", once: true, onEnter: () => {
+    gsap.to(strokes(st[0]), { strokeDashoffset: 0, duration: 1.8, stagger: .04, ease: "power2.inOut" });
+    gsap.from($$(".stage-text > *", st[0]), { yPercent: 40, opacity: 0, duration: 1, stagger: .09, ease: "power3.out" });
+  } });
+  function go(i) {
+    if (i === cur) return;
+    const a = st[cur], b = st[i], dir = i > cur ? 1 : -1; cur = i;
+    if (tl) tl.kill();
+    st.forEach(x => { if (x !== a && x !== b) gsap.set(x, { autoAlpha: 0 }); });
+    $("#stage-cur").textContent = "0" + (i + 1);
+    tl = gsap.timeline()
+      .to(a, { autoAlpha: 0, duration: .4, ease: "power2.in" }, 0)
+      .set(b, { autoAlpha: 1 }, .32)
+      .fromTo($$(".stage-text > *", b), { yPercent: dir * 45, opacity: 0 }, { yPercent: 0, opacity: 1, duration: .95, stagger: .08, ease: "power3.out" }, .32)
+      .fromTo($(".plate", b), { opacity: 0 }, { opacity: 1, duration: .5 }, .32)
+      .fromTo(strokes(b), { strokeDashoffset: dir }, { strokeDashoffset: 0, duration: 1.6, stagger: .035, ease: "power2.inOut" }, .32);
+  }
+  ScrollTrigger.create({ trigger: "#stages", start: "top top", end: "bottom bottom", scrub: true,
+    onUpdate: self => { gsap.set("#stage-bar", { scaleX: self.progress }); go(Math.min(3, Math.floor(self.progress * 4))); } });
+}
+
+// --- signature: the mako resolves into the emblem
+function buildFinale() {
+  const shape = $("#m-shape"), morph = $("#morph"), d0 = shape.getAttribute("d"), t0 = shape.getAttribute("transform");
+  const sample = (p, n) => { const L = p.getTotalLength(), o = []; for (let i = 0; i < n; i++) { const q = p.getPointAtLength(L * i / n); o.push([q.x, q.y]); } return o; };
+  const tip = a => a.reduce((m, p, i) => p[1] < a[m][1] ? i : m, 0);
+  const resample = (pts, k, nA, nB) => { const seg = (a, b, n) => { const o = []; for (let i = 0; i < n; i++) { const f = a + (b - a) * i / n, j = Math.floor(f), r = f - j, p = pts[j % pts.length], q = pts[(j + 1) % pts.length]; o.push([p[0] + (q[0] - p[0]) * r, p[1] + (q[1] - p[1]) * r]); } return o; }; return seg(0, k, nA).concat(seg(k, pts.length, nB)); };
+  const S = sample($("#m-shark"), 1400).map(p => [p[0] + 48, p[1] + 152]), E = sample($("#m-fin"), 700).map(p => [p[0] * 6 + 274, p[1] * 6 + 64]);
+  if (!S.length || !isFinite(S[0][0])) return;
+  // nose-to-dorsal-tip maps to the emblem's leading edge; the rest of the body folds into its trailing edge and base
+  const A = resample(S, tip(S), 90, 250), B = resample(E, tip(E), 90, 250), state = { t: 0 };
+  const render = () => { const t = state.t; let d = ""; for (let i = 0; i < A.length; i++) d += (i ? "L" : "M") + (A[i][0] + (B[i][0] - A[i][0]) * t).toFixed(1) + " " + (A[i][1] + (B[i][1] - A[i][1]) * t).toFixed(1); shape.setAttribute("d", d + "Z"); };
+  shape.removeAttribute("transform"); render();
+  cleanups.push(() => { shape.setAttribute("d", d0); shape.setAttribute("transform", t0); });
+  const lines = $$(".fin-line");
+  gsap.set(morph, { transformOrigin: "50% 50%" });
+  gsap.set(".lock-word b,.lock-word i,.lock-state,.lockup .cta", { opacity: 0 });
+  gsap.set("#m-keel", { strokeDashoffset: 1 });
+  const tl = gsap.timeline({ defaults: { ease: "none" }, scrollTrigger: { trigger: "#finale", start: "top top", end: "bottom bottom", scrub: .8 } });
+  tl.fromTo(morph, { xPercent: 48, yPercent: 10, rotation: -9, scale: 1.3 }, { xPercent: -3, yPercent: 0, rotation: -3, scale: 1.22, duration: 4.6, ease: "power1.out" }, 0)
+    .fromTo(morph, { opacity: 0 }, { opacity: 1, duration: .9 }, 0)
+    .fromTo(shape, { fill: "#08121D" }, { fill: "#08121D", duration: .01 }, 0)
+    .fromTo("#fin-scene .scene-in", { scale: 1.22, xPercent: 3 }, { scale: 1, xPercent: -3, duration: 10 }, 0);
+  lines.forEach((l, i) => tl.fromTo(l, { opacity: 0, y: 34 }, { opacity: 1, y: 0, duration: .55, ease: "power2.out" }, .35 + i * 1.45).to(l, { opacity: 0, y: -26, duration: .4, ease: "power2.in" }, 1.4 + i * 1.45));
+  tl.to(state, { t: 1, duration: 2.4, ease: "power2.inOut", onUpdate: render }, 4.7)
+    .to(morph, { xPercent: 0, rotation: 0, scale: 1, duration: 2.4, ease: "power2.inOut" }, 4.7)
+    .to(shape, { fill: "#F5F3EE", duration: 1.5 }, 5.5)
+    .to("#m-keel", { strokeDashoffset: 0, duration: .8, ease: "power2.out" }, 6.9)
+    .fromTo(".lock-word b", { opacity: 0, letterSpacing: ".62em" }, { opacity: 1, letterSpacing: ".34em", duration: 1.2, ease: "power2.out" }, 7.2)
+    .fromTo(".lock-word i,.lock-state,.lockup .cta", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: .7, stagger: .28, ease: "power2.out" }, 7.6)
+    .to({}, { duration: .9 }, 9.1);
+}
+
+// --- opening: the emblem is drawn, the curtain lifts, the headline rises
+function opening(enter) {
+  const cur = $("#curtain");
+  gsap.timeline({ onComplete: () => { root.classList.remove("pre"); } })
+    .to(".c-fin", { strokeDashoffset: 0, duration: 1.1, ease: "power2.inOut" }, .15)
+    .to(".c-fin", { fillOpacity: 1, duration: .5 }, "-=.35")
+    .to(".c-keel", { strokeDashoffset: 0, duration: .6, ease: "power2.out" }, "-=.45")
+    .to("#curtain svg", { opacity: 0, y: -10, duration: .45, ease: "power2.in" }, "+=.2")
+    .to(cur, { yPercent: -100, duration: 1.05, ease: "power3.inOut" }, "-=.15")
+    .add(() => enter && enter.play(), "-=.85");
+}
+
+const firstEnter = route(true);
+if (hasG) { opening(firstEnter); addEventListener("load", () => ScrollTrigger.refresh()); if (document.fonts) document.fonts.ready.then(() => ScrollTrigger.refresh()); }
+else root.classList.remove("pre");
+</script>
+</body>
+</html>
