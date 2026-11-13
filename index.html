@@ -138,7 +138,7 @@ em,.it{font-style:italic}
 .grain{position:absolute;inset:-50%;z-index:2;opacity:.07;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 
 /* ---- hero ---- */
-.hero{position:relative;height:100vh;height:100svh;min-height:600px;background:#0A1622;color:var(--ivory);overflow:hidden;isolation:isolate}
+.hero{position:relative;display:flex;flex-direction:column;min-height:max(600px,100vh);min-height:max(600px,100svh);background:#0A1622;color:var(--ivory);overflow:hidden;isolation:isolate}
 .h-media{position:absolute;inset:0;z-index:-2;overflow:hidden}
 .h-photo{position:absolute;top:0;bottom:0;right:-8%;width:96%;will-change:transform}
 .h-photo img{width:100%;height:100%;object-fit:cover;object-position:52% 46%;filter:saturate(.5) contrast(1.06) brightness(.82);-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 34%);mask-image:linear-gradient(90deg,transparent 0%,#000 34%)}
@@ -147,7 +147,7 @@ em,.it{font-style:italic}
   linear-gradient(90deg,rgba(6,12,19,.78) 0%,rgba(6,12,19,.2) 46%,rgba(6,12,19,0) 70%),
   radial-gradient(60% 50% at 68% 46%,rgba(20,44,66,0) 0%,rgba(6,12,19,.25) 100%)}
 .h-dim{position:absolute;inset:0;z-index:-1;background:#060C13;opacity:0;pointer-events:none}
-.h-in{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:clamp(28px,4.500vh,48px)}
+.h-in{position:relative;flex:1;display:flex;flex-direction:column;justify-content:flex-end;padding-top:clamp(116px,16vh,150px);padding-bottom:clamp(28px,4.500vh,48px)}
 .h-in .wrap{display:flex;flex-direction:column}
 .h-title{margin-top:clamp(18px,3vh,28px);font-size:clamp(54px,min(8.400vw,14vh),128px);line-height:.96;font-weight:300;letter-spacing:-.02em}
 .h-title .ln:nth-child(2) .li{padding-left:.9em}
@@ -166,6 +166,7 @@ em,.it{font-style:italic}
   .h-sub,.h-cta,.h-cap{grid-column:1/-1}
   .h-cap{justify-self:start;text-align:left}
 }
+@media (max-width:900px) and (max-height:720px){.h-cap{display:none}.h-row{margin-top:22px;padding-top:18px;row-gap:18px}.h-sub{font-size:18px}}
 
 /* ---- sections ---- */
 .sec{padding:var(--sec) 0;position:relative}
@@ -178,7 +179,17 @@ em,.it{font-style:italic}
 .intro .statement{grid-column:4/12}
 .intro .fig{grid-column:1/5;grid-row:2/4;align-self:start;margin-top:clamp(8px,4vw,64px)}
 .intro .fig .media{aspect-ratio:4/5}
-.intro .txt{grid-column:6/11;grid-row:2;display:flex;flex-direction:column;gap:32px;padding-top:clamp(8px,4vw,64px)}
+.intro .txt{grid-column:6/12;grid-row:2/4;align-self:stretch;display:flex;flex-direction:column;justify-content:space-between;gap:48px;padding-top:clamp(8px,4vw,64px)}
+.intro .fig .media img{height:118%;margin-top:-9%}
+.facts{border-top:1px solid var(--hair)}
+.facts div{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:6px 28px;align-items:baseline;padding:20px 0;position:relative}
+.facts div::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--hair);transform-origin:left;transform:scaleX(var(--s,1))}
+.facts dt{font-size:10.5px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-3)}
+.facts dd{font-family:var(--serif);font-size:clamp(21px,1.800vw,26px);line-height:1.25;font-weight:400;color:var(--ink)}
+.pq{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(28px,2.700vw,40px);line-height:1.18;letter-spacing:-.01em;color:var(--ink);max-width:16ch;padding-left:26px;border-left:1px solid var(--champ)}
+.intro .tx-top{display:flex;flex-direction:column;gap:40px}
+.intro .tx-end{display:flex;flex-direction:column;gap:36px}
+@media (max-width:560px){.facts div{grid-template-columns:1fr}}
 .fig figcaption{margin-top:14px;display:flex;justify-content:space-between;gap:16px;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-3)}
 @media (max-width:900px){.intro .lab,.intro .statement,.intro .txt{grid-column:1/-1}.intro .fig{grid-column:1/9;grid-row:auto}.intro .txt{grid-row:auto;padding-top:0}}
 
@@ -264,6 +275,30 @@ html:not(.anim) .st-index{display:none}
 .fine{font-size:12px;color:var(--ink-3);max-width:62ch}
 [data-dark] .fine{color:rgba(243,240,232,.45)}
 @media (max-width:900px){.ints .head,.ints .lede{grid-column:1/-1}.sectors h3{grid-column:2/-1}.sectors p{grid-column:2/-1;margin-top:6px}.sectors li::before{grid-column:1/2}}
+
+
+/* horizontal gallery: areas of interest (desktop, animated only) */
+.hz{display:none;position:relative;background:var(--ivory)}
+.hz-frame{height:100vh;height:100svh;display:flex;flex-direction:column;justify-content:center;gap:clamp(28px,5vh,52px);overflow:hidden;padding-top:72px}
+.hz-bar{display:flex;align-items:center;gap:28px}
+.hz-bar .label{flex:none}
+.hz-prog{flex:1;height:1px;background:var(--hair);position:relative}
+.hz-prog i{position:absolute;inset:0;background:var(--ink);transform-origin:left;transform:scaleX(0)}
+.hz-count{flex:none;font-family:var(--serif);font-style:italic;font-size:19px;color:var(--ink-3);font-variant-numeric:lining-nums tabular-nums}
+.hz-count b{font-weight:400;color:var(--ink)}
+.hz-track{display:flex;width:max-content;padding-left:max(var(--g),calc((100vw - 1360px) / 2 + var(--g)));padding-right:12vw;will-change:transform}
+.hz-p{flex:none;position:relative;overflow:hidden;width:clamp(360px,33vw,500px);min-height:min(60vh,540px);border-left:1px solid var(--hair);padding:4px clamp(28px,3vw,48px) 0;display:flex;flex-direction:column}
+.hz-n{font-size:10.5px;font-weight:500;letter-spacing:.32em;color:var(--champ)}
+.hz-p h3{margin-top:auto;font-size:clamp(40px,4vw,62px);line-height:1;font-weight:300;letter-spacing:-.016em;max-width:9ch;position:relative}
+.hz-p p{margin-top:24px;max-width:36ch;color:var(--ink-2);font-size:15px;position:relative}
+.hz-p dl{margin-top:32px;padding-top:16px;border-top:1px solid var(--hair);display:grid;grid-template-columns:auto 1fr;gap:6px 22px;font-size:13px;position:relative}
+.hz-p dt{font-size:10px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--champ);padding-top:2px}
+.hz-p dd{color:var(--ink-2)}
+.hz-big{position:absolute;right:-.04em;top:-.12em;font-family:var(--serif);font-weight:300;font-size:clamp(200px,20vw,320px);line-height:1;color:var(--stone);pointer-events:none;user-select:none}
+.hz-end{justify-content:flex-end;gap:28px}
+.hz-end .display-3{max-width:13ch}
+@media (max-height:720px){.hz-frame{gap:22px}.hz-p h3{font-size:clamp(34px,3.200vw,46px)}.hz-p p{margin-top:14px;font-size:14px;line-height:1.6}.hz-p dl{margin-top:18px}.hz-big{font-size:clamp(160px,15vw,240px)}}
+@media (min-width:901px){.anim .hz{display:block}.anim .ints .sectors,.anim .ints .ints-foot{display:none}.anim .ints{padding-bottom:0}}
 
 /* signature */
 .sig{position:relative;background:var(--abyss);color:var(--ivory)}
@@ -463,8 +498,19 @@ footer a:hover{color:var(--ivory)}
       <p class="statement" data-lines>Marrajo Holdings is a privately held investment and holding company focused on strategic ownership, disciplined capital allocation and the development of enduring business interests.</p>
       <figure class="fig"><div class="media clip"><img class="graded" src="https://images.pexels.com/photos/6788584/pexels-photo-6788584.jpeg?auto=compress&cs=tinysrgb&w=1920" srcset="https://images.pexels.com/photos/6788584/pexels-photo-6788584.jpeg?auto=compress&cs=tinysrgb&w=600 600w, https://images.pexels.com/photos/6788584/pexels-photo-6788584.jpeg?auto=compress&cs=tinysrgb&w=900 900w, https://images.pexels.com/photos/6788584/pexels-photo-6788584.jpeg?auto=compress&cs=tinysrgb&w=1300 1300w" sizes="(max-width: 900px) 66vw, 30vw" alt="Dark veined stone" width="1600" height="1060" decoding="async" loading="lazy" style="object-position:50% 50%"></div><figcaption><span>Permanence</span><span>Plate I</span></figcaption></figure>
       <div class="txt">
-        <div class="body rv"><p>We approach ownership as a long-term responsibility. Our role is to identify sound opportunities, commit capital with care and support the interests we hold as they develop over time.</p></div>
-        <div class="rv"><a class="link" href="#about">About Marrajo Holdings <i></i></a></div>
+        <div class="tx-top">
+          <div class="body rv"><p>We approach ownership as a long-term responsibility. Our role is to identify sound opportunities, commit capital with care and support the interests we hold as they develop over time.</p></div>
+          <dl class="facts" id="facts">
+            <div><dt>Structure</dt><dd>Privately held</dd></div>
+            <div><dt>Horizon</dt><dd>Long-term ownership</dd></div>
+            <div><dt>Mandate</dt><dd>Strategic ownership and capital allocation</dd></div>
+            <div><dt>Scope</dt><dd>Diversified interests across sectors</dd></div>
+          </dl>
+        </div>
+        <div class="tx-end">
+          <p class="pq rv">Patient capital, carefully placed.</p>
+          <div class="rv"><a class="link" href="#about">About Marrajo Holdings <i></i></a></div>
+        </div>
       </div>
     </div>
   </section>
@@ -514,6 +560,13 @@ footer a:hover{color:var(--ivory)}
       <div class="lede body rv"><p>Diversification is a discipline, not an objective in itself. We consider opportunities in sectors where long-term ownership and careful capital allocation can make a meaningful difference.</p></div>
       <ul class="sectors" id="home-sectors"></ul>
       <div class="ints-foot"><p class="fine">These are areas of interest. They are not a statement of current holdings.</p><a class="link" href="#portfolio">Portfolio <i></i></a></div>
+    </div>
+  </section>
+
+  <section class="hz" id="hz" aria-label="Areas of interest">
+    <div class="hz-frame">
+      <div class="wrap hz-bar"><p class="label">Areas of interest</p><div class="hz-prog"><i id="hz-prog"></i></div><p class="hz-count"><b id="hz-cur">01</b> / <span id="hz-tot">06</span></p></div>
+      <div class="hz-track" id="hz-track"></div>
     </div>
   </section>
 
@@ -777,6 +830,9 @@ $("#year").textContent = new Date().getFullYear();
 
 // --- content
 $("#home-sectors").innerHTML = SECTORS.map(s => `<li class="rv"><h3>${esc(s.name)}</h3><p>${esc(s.short)}</p></li>`).join("");
+$("#hz-tot").textContent = String(SECTORS.length).padStart(2, "0");
+$("#hz-track").innerHTML = SECTORS.map((s, i) => { const n = String(i + 1).padStart(2, "0"); return `<article class="hz-p"><span class="hz-big" aria-hidden="true">${n}</span><span class="hz-n">${n}</span><h3>${esc(s.name)}</h3><p>${esc(s.text)}</p><dl><dt>Emphasis</dt><dd>${esc(s.focus)}</dd></dl></article>`; }).join("") +
+  `<article class="hz-p hz-end"><h3 class="display-3">Interests, not holdings.</h3><p class="fine" style="font-size:13.5px">These sectors describe where we direct our attention. They are not a statement of current holdings.</p><a class="link" href="#portfolio">View the Portfolio <i></i></a></article>`;
 const tabs = $("#tabs"), panel = $("#panel");
 tabs.innerHTML = SECTORS.map((s, i) => `<button role="tab" id="tab-${i}" aria-controls="panel" aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}">${esc(s.name)}</button>`).join("");
 function showSector(i, focus) {
@@ -897,7 +953,7 @@ function common(page) {
 function build(r, page) {
   common(page);
   const enter = gsap.timeline({ paused: true });
-  if (r === "home") { buildHero(enter); buildExpand(); buildStages(); buildSignature(); }
+  if (r === "home") { buildHero(enter); buildIntro(); buildExpand(); buildStages(); buildHz(); buildSignature(); }
   else {
     const h1 = $(".phead h1", page), im = $(".ph-media img", page);
     enter.fromTo(im, { scale: 1.16 }, { scale: 1, duration: 2.6, ease: "power2.out" }, 0)
@@ -918,9 +974,37 @@ function buildHero(enter) {
     .fromTo(".h-row", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 1.2, ease: EASE }, 1.2);
   gsap.timeline({ defaults: { ease: "none" }, scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true } })
     .to("#h-photo", { scale: 1.16, xPercent: -6, yPercent: 6 }, 0)
-    .to("#h-in", { yPercent: -18 }, 0)
-    .to("#h-in", { opacity: 0, duration: .55 }, .2)
+    .to("#h-in", { yPercent: -8 }, 0)
+    .to("#h-in", { autoAlpha: 0, duration: .3, ease: "power1.in" }, .58)
     .to("#h-dim", { opacity: .85 }, 0);
+}
+
+
+// Ib. Introduction: the facts rule in line by line; the plate drifts inside its frame
+function buildIntro() {
+  const rows = $$("#facts div");
+  gsap.set(rows, { opacity: 0, y: 14 });
+  rows.forEach(r => r.style.setProperty("--s", 0));
+  gsap.timeline({ scrollTrigger: { trigger: "#facts", start: "top 85%", once: true } })
+    .to(rows, { opacity: 1, y: 0, duration: 1, stagger: .12, ease: EASE }, 0)
+    .fromTo(rows, { "--s": 0 }, { "--s": 1, duration: 1.4, stagger: .12, ease: "power3.inOut" }, .1);
+  gsap.fromTo(".intro .fig .media img", { yPercent: -6 }, { yPercent: 6, ease: "none", scrollTrigger: { trigger: ".intro .fig", start: "top bottom", end: "bottom top", scrub: true } });
+}
+
+// IIIb. Areas of interest: the page holds while the panels pass sideways
+function buildHz() {
+  if (!matchMedia("(min-width: 901px)").matches) return;
+  const track = $("#hz-track"), panels = $$(".hz-p", track), n = SECTORS.length;
+  const dist = () => Math.max(0, track.scrollWidth - innerWidth);
+  const move = gsap.to(track, { x: () => -dist(), ease: "none",
+    scrollTrigger: { trigger: "#hz", start: "top top", end: () => "+=" + dist(), pin: true, scrub: .8, invalidateOnRefresh: true, anticipatePin: 1,
+      onUpdate: self => { gsap.set("#hz-prog", { scaleX: self.progress }); $("#hz-cur").textContent = String(Math.min(n, 1 + Math.floor(self.progress * n * .999))).padStart(2, "0"); } } });
+  panels.forEach(p => {
+    const big = $(".hz-big", p), h = $("h3", p);
+    if (big) gsap.fromTo(big, { xPercent: 22 }, { xPercent: -22, ease: "none", scrollTrigger: { trigger: p, containerAnimation: move, start: "left right", end: "right left", scrub: true } });
+    gsap.fromTo([h, ...$$("p,dl,a", p)], { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 1, stagger: .07, ease: EASE, scrollTrigger: { trigger: p, containerAnimation: move, start: "left 88%", toggleActions: "play none none reverse" } });
+  });
+  gsap.fromTo(".hz-bar", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 1, ease: EASE, scrollTrigger: { trigger: "#hz", start: "top 70%", once: true } });
 }
 
 // II. Expanding image: an inset photograph opens to full bleed and hands over to the dark chapter
